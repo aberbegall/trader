@@ -1,0 +1,2 @@
+# trader
+Easy trader app
