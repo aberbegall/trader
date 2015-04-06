@@ -1,5 +1,5 @@
-# trader
-Easy trader app
+# trader Server
+Trader Server
 
 Copyright (c) 2015, Agustin Berbegall
 All rights reserved.
