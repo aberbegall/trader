@@ -5,8 +5,5 @@ All rights reserved.
 
 Provides the services required by traderUI. Those are the services provided:
 
-() Get share data\r\n
-() Get share data lis\r\n
-() Monitor share\r\n
-() Get share history
+() GetShareData, GetShareDataList, MonitorShare and GetShareHistory
 
