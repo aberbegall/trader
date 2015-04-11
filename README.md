@@ -3,7 +3,7 @@
 Copyright (c) 2015, Agustin Berbegall
 All rights reserved.
 
-Provides the services required by traderUI. Those are the services provided:
+Provides the services required by traderUI:
 
-() GetShareData, GetShareDataList, MonitorShare and GetShareHistory
+GetShareData, GetShareDataList, MonitorShare and GetShareHistory
 
