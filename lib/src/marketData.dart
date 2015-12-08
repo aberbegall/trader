@@ -22,6 +22,10 @@ Future<List<dto.Share>> getShareDataList(List<String> shareIDs) {
 Future<dto.Share> _getShareData(http.Client client, String shareID) {
   var url = "http://finance.google.com/finance/info?q=";
 
+  if (shareID == null) {
+    throw new ArgumentError("must not be null");
+  }
+
   return client
       .get('${url}${shareID}',
           headers: {'User-Agent': 'Dart/1.8.5 (stockShares)'})
