@@ -1,4 +1,4 @@
-// Copyright (c) 2015, Agustin Berbegall Beltran. All rights reserved. Use of this source code
+// Copyright (c) 2015, Agustin Berbegall. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:trader/src/marketData.dart' as marketStockShares;

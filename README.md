@@ -1,6 +1,9 @@
-# Trader Server
+# Trader Server [![Build Status](https://drone.io/github.com/aberbegall/traderServer/status.png)](https://drone.io/github.com/aberbegall/traderServer/latest)
 
 Copyright (c) 2015, Agustin Berbegall
 All rights reserved.
 
-[![Build Status](https://drone.io/github.com/aberbegall/traderServer/status.png)](https://drone.io/github.com/aberbegall/traderServer/latest)
+Provides the services required by traderUI:
+
+GetShareData, GetShareDataList, MonitorShare & GetShareHistory
+
