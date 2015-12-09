@@ -1,4 +1,4 @@
-# Trader Server [![Build Status](https://drone.io/github.com/aberbegall/traderServer/status.png)](https://drone.io/github.com/aberbegall/traderServer/latest)
+# Trader Server [![Build Status](https://travis-ci.org/aberbegall/traderServer.svg?branch=develop)](https://travis-ci.org/aberbegall/traderServer)
 
 Copyright (c) 2015, Agustin Berbegall
 All rights reserved.
