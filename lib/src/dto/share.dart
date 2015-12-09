@@ -2,7 +2,7 @@ library dto;
 
 import 'package:dson/dson.dart';
 
-class Share extends Object{
+class share extends Object{
   @Property("t")
   String name;
 

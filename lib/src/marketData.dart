@@ -8,10 +8,10 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:http/http.dart' as http;
-import 'package:trader/src/dto/Share.dart' as dto;
+import 'package:trader/src/dto/share.dart' as dto;
 import 'package:dson/dson.dart' as dson;
 
-Future<List<dto.Share>> getShareDataList(List<String> shareIDs) {
+Future<List<dto.share>> getShareDataList(List<String> shareIDs) {
   var client = new http.Client();
 
   return Future
@@ -19,7 +19,7 @@ Future<List<dto.Share>> getShareDataList(List<String> shareIDs) {
       .whenComplete(() => client.close());
 }
 
-Future<dto.Share> _getShareData(http.Client client, String shareID) {
+Future<dto.share> _getShareData(http.Client client, String shareID) {
   var url = "http://finance.google.com/finance/info?q=";
 
   if (shareID == null) {
@@ -32,7 +32,7 @@ Future<dto.Share> _getShareData(http.Client client, String shareID) {
       .then((_getShareFromResponse));
 }
 
-dto.Share _getShareFromResponse(http.Response httpResponse) {
+dto.share _getShareFromResponse(http.Response httpResponse) {
   if (httpResponse.statusCode == HttpStatus.OK) {
     return _getShareFromBody(httpResponse.body);
   } else {
@@ -40,9 +40,9 @@ dto.Share _getShareFromResponse(http.Response httpResponse) {
   }
 }
 
-dto.Share _getShareFromBody(String responseBody) {
+dto.share _getShareFromBody(String responseBody) {
   responseBody = _sanitizeText(responseBody);
-  dto.Share share = dson.deserialize(responseBody, dto.Share);
+  dto.share share = dson.deserialize(responseBody, dto.share);
   return share;
 }
 
