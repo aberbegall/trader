@@ -14,7 +14,7 @@ if [ "$COVERALLS_TOKEN" ] && [ "$TRAVIS_DART_VERSION" = "stable" ]; then
     --retry 2 \
     --exclude-test-files \
     --debug \
-    test/test_all.dart
+    test/marketData_test.dart
   echo "Coverage complete."
 else
   if [ -z ${COVERALLS_TOKEN+x} ]; then echo "COVERALLS_TOKEN is unset"; fi
