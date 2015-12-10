@@ -24,6 +24,7 @@ if [ "$COVERALLS_TOKEN" ]; then
   pub global activate dart_coveralls
   echo "Running coverage..."
   pub global run dart_coveralls report \
+    --token $COVERALLS_TOKEN \
     --retry 2 \
     --exclude-test-files \
     --debug \
