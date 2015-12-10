@@ -8,24 +8,25 @@
 set -e
 
 # Verify that the libraries are error free.
+echo "Analyzing sorces..."
 dartanalyzer --fatal-warnings \
   bin/main.dart \
   lib/src/marketData.dart \
   test/all_tests.dart
 
 # Run the tests.
+echo "Running tests..."
 dart test/all_tests.dart
-
-echo tests were exected!
 
 # Install dart_coveralls; gather and send coverage data.
 if [ "$COVERALLS_TOKEN" ]; then
+  echo "Installing coveralls..."
   pub global activate dart_coveralls
+  echo "Running coverage..."
   pub global run dart_coveralls report \
-    --token $COVERALLS_TOKEN \
     --retry 2 \
     --exclude-test-files \
+    --debug \
     test/all_tests.dart
+  echo "Coverage complete."
 fi
-
-echo end of travis.sh
