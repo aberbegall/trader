@@ -16,6 +16,8 @@ dartanalyzer --fatal-warnings \
 # Run the tests.
 dart test/all_tests.dart
 
+echo tests were exected!
+
 # Install dart_coveralls; gather and send coverage data.
 if [ "$COVERALLS_TOKEN" ]; then
   pub global activate dart_coveralls
@@ -25,3 +27,5 @@ if [ "$COVERALLS_TOKEN" ]; then
     --exclude-test-files \
     test/all_tests.dart
 fi
+
+echo end of travis.sh
