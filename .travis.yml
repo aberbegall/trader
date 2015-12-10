@@ -6,3 +6,5 @@ dart:
 script: ./tool/travis.sh
 env:
   - DARTANALYZER_FLAGS=--fatal-warnings
+before_install:
+ - chmod +x gradlew
