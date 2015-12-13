@@ -1,7 +1,9 @@
-name: trader
+name: trader_server
 version: 0.0.1
-description: Trader server for trader UI.
+description: >
+A set of RESTful API services to get basic stocks data.
 author: Agustin Berbegall <aberbegall@yahoo.es>
+homepage: https://github.com/aberbegall
 environment:
   sdk: '>=1.0.0 <2.0.0'
 dependencies:
