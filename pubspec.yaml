@@ -1,7 +1,6 @@
 name: trader_server
 version: 0.0.1
-description: >
-A set of RESTful API services to get basic stocks data.
+description: A set of RESTful API services to get basic stocks data.
 author: Agustin Berbegall <aberbegall@yahoo.es>
 homepage: https://github.com/aberbegall
 environment:
