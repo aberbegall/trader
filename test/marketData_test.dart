@@ -1,4 +1,6 @@
-library marketData_test;
+@TestOn("vm")
+
+library test;
 
 import 'package:trader/src/marketData.dart';
 import 'package:test/test.dart';

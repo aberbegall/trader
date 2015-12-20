@@ -1,9 +1,9 @@
-// Copyright (c) 2015, Agustin Berbegall Beltran. All rights reserved. Use of this source code
+// Copyright (c) 2015, Agustin Berbegall. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:trader/src/marketData.dart' as marketStockShares;
 import '../lib/src/persistence.dart' as persistence;
-import 'package:trader/src/dto/Share.dart' as dto;
+import 'package:trader/src/dto/share.dart' as dto;
 
 main() {
   print('Loading data . . .\n');
@@ -20,11 +20,11 @@ main() {
   }).catchError(onErrorGettingData);
 }
 
-void storeShareDataList(List<dto.Share> shares) {
+void storeShareDataList(List<dto.share> shares) {
   shares.forEach(storeShare);
 }
 
-void storeShare(dto.Share share) {
+void storeShare(dto.share share) {
   var redisServer = "localhost:6379/2";
   var redis = new persistence.RedisPersistence(redisServer);
   redis
