@@ -10,7 +10,7 @@ dartanalyzer --fatal-warnings \
   test/all_tests.dart
 
 # Run the tests.
-dart test
+dart test/all_tests.dart
 
 # Install dart_coveralls; gather and send coverage data.
 if [ "$COVERALLS_TOKEN" ]; then
