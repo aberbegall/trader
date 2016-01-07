@@ -1,9 +1,9 @@
 // Copyright (c) 2015, Agustin Berbegall. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
-import 'package:trader/src/marketData.dart' as marketStockShares;
+import '../lib/src/marketData.dart' as marketStockShares;
 import '../lib/src/persistence.dart' as persistence;
-import 'package:trader/src/dto/share.dart' as dto;
+import '../lib/src/dto/share.dart' as dto;
 
 main() {
   print('Loading data . . .\n');
