@@ -2,19 +2,20 @@ library dto;
 
 import 'package:dson/dson.dart';
 
+@serializable
 class share extends Object{
-  @Property("t")
+  @SerializedName("t")
   String name;
 
-  @Property("l")
+  @SerializedName("l")
   String value;
 
-  @Property("ltt")
+  @SerializedName("ltt")
   String timeOfTrade;
 
-  @Property("c")
+  @SerializedName("c")
   String change;
 
-  @Property("cp")
+  @SerializedName("cp")
   String percentageChange;
 }
