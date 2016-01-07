@@ -2,7 +2,7 @@
 
 library test;
 
-import 'package:trader/src/marketData.dart';
+import '../lib/src/marketData.dart';
 import 'package:test/test.dart';
 
 // test the getShareData for a specific shared id.
