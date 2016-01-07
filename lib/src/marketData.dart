@@ -41,7 +41,7 @@ dto.share _getShareFromResponse(http.Response httpResponse) {
 
 dto.share _getShareFromBody(String responseBody) {
   responseBody = _sanitizeText(responseBody);
-  dto.share share = dson.deserialize(responseBody, dto.share);
+  dto.share share = dson.fromJson(responseBody, dto.share);
   return share;
 }
 
