@@ -8,7 +8,7 @@ import 'dart:io';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'package:dson/dson.dart' as dson;
-import '../lib/src/dto/share.dart' as dto;
+import 'dto/share.dart' as dto;
 
 Future<List<dto.share>> getShareDataList(List<String> shareIDs) {
   var client = new http.Client();
