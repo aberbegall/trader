@@ -3,7 +3,7 @@ library dto;
 import 'package:dson/dson.dart';
 
 @serializable
-class share extends Object{
+class share extends Object {
   @SerializedName("t")
   String name;
 

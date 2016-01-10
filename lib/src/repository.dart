@@ -1,18 +1,19 @@
-library persistence;
+library repository;
 
 import 'dart:async';
+
 import "package:redis_client/redis_client.dart";
 
-abstract class Persistence
+abstract class Repository
 {
   Future setValue(String key, String value);
   Future<String> getValue(String key);
 }
 
-class RedisPersistence implements Persistence {
+class RedisRepository implements Repository {
   String connectionString;
 
-  RedisPersistence(this.connectionString);
+  RedisRepository(this.connectionString);
 
   Future setValue(String key, String value) {
     return RedisClient

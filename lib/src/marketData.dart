@@ -4,10 +4,12 @@
 /// The marketStock library.
 library marketData;
 
-import 'dart:io';
 import 'dart:async';
-import 'package:http/http.dart' as http;
+import 'dart:io';
+
 import 'package:dson/dson.dart' as dson;
+import 'package:http/http.dart' as http;
+
 import 'dto/share.dart' as dto;
 
 Future<List<dto.share>> getShareDataList(List<String> shareIDs) {
@@ -51,6 +53,5 @@ String _sanitizeText(String text) {
       .replaceAll('\n', '')
       .replaceAll('//', '')
       .replaceAll('[', '')
-      .replaceAll(']', '')
-      .trim();
+      .replaceAll(']', '');
 }
