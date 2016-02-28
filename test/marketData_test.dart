@@ -1,17 +1,31 @@
 @TestOn("vm")
-
 library test;
 
-import '../lib/src/marketData.dart';
 import 'package:test/test.dart';
 
-// test the getShareData for a specific shared id.
+import '../lib/src/marketData.dart';
 
-main(){
-  test("getShareData Async returns a list of stock shares", (){
+main() {
+  test("getShareData return a share instance", () {
+    // prepare mock data
+    var shareGamesa = 'BME:GAM';
+
+    // execute
+    var result = getShareData(shareGamesa);
+
+    // evaluate
+    expect(result, isNotNull);
+  });
+
+  test("getShareDataList returns a list of stock shares", () {
+    // prepare mock data
     var listOfShares = new List<String>();
     listOfShares.addAll(['INDEXBME:IB', 'BME:GAM', 'BME:GRF', 'BME:SCYR']);
 
-    getShareDataList(listOfShares).then((value) => expect(value, isNotNull));
+    // execute
+    var result = getShareDataList(listOfShares);
+
+    // evaluate
+    expect(result, isNotNull);
   });
 }

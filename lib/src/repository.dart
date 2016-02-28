@@ -4,8 +4,7 @@ import 'dart:async';
 
 import "package:redis_client/redis_client.dart";
 
-abstract class Repository
-{
+abstract class Repository {
   Future setValue(String key, String value);
   Future<String> getValue(String key);
 }

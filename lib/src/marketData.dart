@@ -12,6 +12,13 @@ import 'package:http/http.dart' as http;
 
 import 'dto/share.dart' as dto;
 
+Future<dto.share> getShareData(String shareID) {
+  var client = new http.Client();
+
+  return _getShareData(client, shareID)
+      .whenComplete(() => client.close());
+}
+
 Future<List<dto.share>> getShareDataList(List<String> shareIDs) {
   var client = new http.Client();
 
