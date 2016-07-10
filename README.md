@@ -3,7 +3,9 @@
 Copyright (c) 2015, Agustin Berbegall
 All rights reserved.
 
-Provides the services required by trader-UI:
+This API provides the following RESTful services required by trader-UI:
 
-GetShareData, GetShareDataList...
+() GetShareData
+() GetShareDataList
+() GetShareHistoryData
 

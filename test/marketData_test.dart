@@ -10,6 +10,8 @@ main() {
     // prepare mock data
     var shareGamesa = 'BME:GAM';
 
+    // mock data repository
+
     // execute
     var result = getShareData(shareGamesa);
 

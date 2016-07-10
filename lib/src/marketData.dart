@@ -31,12 +31,12 @@ Future<dto.share> _getShareData(http.Client client, String shareID) {
   var url = "http://finance.google.com/finance/info?q=";
 
   if (shareID == null) {
-    throw new ArgumentError("must not be null");
+    throw new ArgumentError.notNull(shareID);
   }
 
   return client
       .get('${url}${shareID}',
-          headers: {'User-Agent': 'Dart/1.8.5 (stockShares)'})
+      headers: {'User-Agent': 'Dart/1.16.0 (trader-API)'})
       .then((_getShareFromResponse));
 }
 
